@@ -1,0 +1,137 @@
+name: "06: PRD-lite"
+description: 1枚PRDでMVPのスコープを確定する。これ以降はこのIssueが全員の北極星。
+title: "06: PRD-lite - [プロダクト名]"
+labels: ["decision", "foundation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 PRD-lite（1枚PRD）
+        このIssueが確定したら、実装中に出る「これやるべき？」は全部ここに照らす。
+
+  - type: input
+    id: one-liner
+    attributes:
+      label: 一言で（Who / Problem / Promise）
+      description: 「[Who]が[Problem]するとき、[Promise]できるプロダクト」の形で書く。
+      placeholder: "副業初心者が確定申告で何をすればいいかわからないとき、30分で今月のToDoが確定できるプロダクト"
+    validations:
+      required: true
+
+  - type: textarea
+    id: non-goals
+    attributes:
+      label: Non-goal（今回やらないこと）
+      description: スコープを守るために「やらないこと」を明記する。
+      placeholder: |
+        - 法人・個人事業主向けの機能
+        - 経費の自動取込・レシートOCR
+        - 税理士とのチャット機能
+        - 複数年の履歴管理
+        - 英語対応
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: MVPで起こす変化（Before / After）
+      placeholder: |
+        **Before**: 確定申告の1週間前に「何をすればいいかわからない」状態でパニックになる
+        **After**: 副業カテゴリを選ぶだけで「今月やること」が3ステップに絞られ、初日に着手できる
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 主要ユースケース（最大3つ）
+      description: 「[ユーザー]が[状況]のとき、[行動]して[結果]を得る」の形で書く。
+      placeholder: |
+        1. 副業ライターが2月初旬に「今年の確定申告に必要な書類を知りたい」とき、副業種別を選択すると必要書類リストが生成され、翌週の準備を始められる。
+
+        2. 申告書作成中に「この経費は落とせる？」と迷ったとき、カテゴリ別のFAQで即座に確認できる。
+
+        3. 申告を終えた後「来年はもっと楽にしたい」と思ったとき、領収書の保管ルールがわかり習慣化できる。
+    validations:
+      required: true
+
+  - type: textarea
+    id: mvp-features
+    attributes:
+      label: MVP機能（最大5つ）
+      description: 機能ではなく「ユーザーができるようになること」で書く。優先度順。
+      placeholder: |
+        1. 副業カテゴリ選択（8種類）→ 申告ステップ一覧の生成
+        2. ステップ別チェックリスト（完了チェック・進捗保存）
+        3. 経費カテゴリ別OK/NG一覧（各カテゴリ10項目）
+        4. 必要書類リスト（副業種別・収入額別で分岐）
+        5. 申告期限カウントダウン + 今週やることのプッシュ通知
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: 計測（North Star + 補助2つ）
+      description: North Star: プロダクトの本質的な価値を示す1指標。
+      placeholder: |
+        **North Star**: 申告完了率（チェックリストを最後まで完了したユーザーの割合）
+        目標: MVPリリース後30日で 30%
+
+        **補助指標**:
+        1. Day7リテンション率（目標: 40%）
+        2. カテゴリ選択完了率＝Onboarding完了率（目標: 70%）
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: リスク Top3
+      description: 「もしこれが外れたらプロダクトが成立しない」という前提を書く。
+      placeholder: |
+        1. **法改正リスク**: 税制が毎年変わるため、コンテンツ更新コストが高くなる
+           対策: 初年度は2024年申告（令和6年分）に限定。更新ルールを07のBuild Planに入れる。
+
+        2. **検索流入の不確実性**: SEOで流入を想定しているが、競合大手に負ける可能性
+           対策: まずTwitterでの口コミ拡散を優先。SEOは3ヶ月後に再評価。
+
+        3. **ユーザーの離脱点**: 「書類を集める」ステップで実際に離脱する可能性
+           対策: チェックリストにリマインダー機能を付けて再訪を促す。
+    validations:
+      required: true
+
+  - type: textarea
+    id: prototype-links
+    attributes:
+      label: 関連Issue / 成果物リンク
+      placeholder: |
+        - Idea Card: #1
+        - Idea Selection: #5
+        - インタビュー: #6, #7, #8
+        - Competitive Map: #10
+        - Prototype Test: #12, #13
+        - Figmaリンク: https://figma.com/...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: DoD
+      options:
+        - label: 一言説明（Who/Problem/Promise）が書かれている
+          required: true
+        - label: Non-goalが3つ以上明記されている
+          required: true
+        - label: Before/Afterで変化が書かれている
+          required: true
+        - label: MVP機能が5つ以内に絞られている
+          required: true
+        - label: North Star指標と目標値が明記されている
+          required: true
+        - label: リスクTop3に対策が付いている
+          required: true
+        - label: 2人が 👍 し、このIssueを北極星として合意している
+          required: true

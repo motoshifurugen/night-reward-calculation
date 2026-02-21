@@ -1,0 +1,145 @@
+name: "03: Interview Session"
+description: 問題インタビュー1回分の記録。1セッション1Issue。
+title: "03: Interview - [ターゲット属性] - [YYYY-MM-DD]"
+labels: ["research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎤 問題インタビュー記録
+        解決策を語らない。「過去の体験」だけを聞く。
+
+  - type: input
+    id: target-idea
+    attributes:
+      label: 対象 Idea Issue
+      placeholder: "例: #1 副業確定申告ガイド"
+    validations:
+      required: true
+
+  - type: textarea
+    id: interviewee
+    attributes:
+      label: 被験者属性
+      description: 個人を特定しない範囲で属性を書く。
+      placeholder: |
+        - 年代・性別: 30代・男性
+        - 職業: 会社員（副業: Webライター）
+        - 確定申告経験: 1回（昨年初めて）
+        - リクルート経路: Twitter DM
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: 困った体験の時系列（Trigger → Actions → Outcome）
+      description: 「最後に○○で困ったのはいつ？」から掘り下げた内容を書く。
+      placeholder: |
+        **Trigger（何がきっかけで問題が発生したか）**
+        2月末、会社の給与明細を見て「副業分も申告しないといけない」と思い出した。
+
+        **Actions（実際にどう動いたか、ステップで）**
+        1. Googleで「副業 確定申告 やり方」を検索
+        2. 20記事読んだが情報が矛盾していて混乱
+        3. 友人の会計士にLINEで連絡、返信まで3日待つ
+        4. ギリギリで税務署に駆け込む
+
+        **Outcome（最終的にどうなったか・感情）**
+        なんとか申告はできたが、合ってるか不安で3月中ずっとモヤモヤしていた。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pain-strength
+    attributes:
+      label: 痛みの強さ（被験者の言動から判定）
+      options:
+        - "5: 今すぐ解決したい・お金を払ってでも解決したい"
+        - "4: かなり困っている・何度も試みた"
+        - "3: 困っているが我慢できる・回避策がある"
+        - "2: あったら使う程度"
+        - "1: 特に困っていない"
+    validations:
+      required: true
+
+  - type: textarea
+    id: pain-evidence
+    attributes:
+      label: 痛みの強さの根拠
+      description: スコアの根拠となる発言・行動を書く。
+      placeholder: "「毎年本当に嫌で、2月になると憂鬱になる」（発言）。友人に何度もLINEしているにも関わらず毎年繰り返している（行動）。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives-pain
+    attributes:
+      label: 現在の代替手段と不満
+      placeholder: |
+        - freee: 使ってみたが画面が多くて途中で離脱した
+        - Googleで検索: 情報量が多すぎて何が正しいかわからない
+        - 税理士に依頼: 費用が高くて副業の収入では割に合わない
+    validations:
+      required: true
+
+  - type: textarea
+    id: willingness
+    attributes:
+      label: 支払い／努力の意思（任意）
+      description: 「もし解決するサービスがあったら？」に対する反応。
+      placeholder: |
+        - 月額: 「500円なら使う、1000円は迷う」
+        - 一括: 「確定申告シーズンだけ使えるなら3000円まで出す」
+        - 努力: 「30分なら手順通りやる。1時間は無理」
+    validations:
+      required: false
+
+  - type: textarea
+    id: key-quotes
+    attributes:
+      label: 重要発言（任意）
+      description: そのまま引用する価値がある発言をピックアップ。
+      placeholder: |
+        - 「毎年2月になると確定申告のことが頭にちらついて、仕事に集中できない」
+        - 「正直、間違えて脱税になるのが怖くて、少し多めに払っておこうと思ってる」
+    validations:
+      required: false
+
+  - type: dropdown
+    id: conclusion
+    attributes:
+      label: 結論
+      options:
+        - "Strong: 痛みが強く・頻繁で・代替が弱い → このアイディアを前進させる"
+        - "Medium: 痛みは確認できたが頻度か代替強さに課題 → もう2件インタビューする"
+        - "Weak: 痛みが弱い・代替で十分満足している → このアイディアは保留"
+    validations:
+      required: true
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 次アクション
+      placeholder: |
+        - Strong → 04: Competitive Map を起票する → @username
+        - Medium → 追加インタビューを2件起票する → @username
+        - Weak → 02: Idea Selection Issueにコメントしアイディアを差し替える
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: DoD
+      options:
+        - label: Trigger/Actions/Outcomeが時系列で書かれている
+          required: true
+        - label: 痛みの強さスコアに根拠が付いている
+          required: true
+        - label: 結論（Strong/Medium/Weak）が選ばれている
+          required: true
+        - label: 次アクションが明記されている
+          required: true
+        - label: 相手が読んで 👍 している
+          required: true

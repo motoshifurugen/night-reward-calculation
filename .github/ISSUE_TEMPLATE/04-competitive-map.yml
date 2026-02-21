@@ -1,0 +1,109 @@
+name: "04: Competitive / Alternative Map"
+description: 競合・代替手段を整理し、勝ち筋仮説を立てる。1アイディアにつき1Issue。
+title: "04: Competitive Map - [アイディア名]"
+labels: ["research", "decision"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🗺️ 競合・代替マップ
+        「競合アプリ」だけでなく「アプリ以外の代替手段」も必ず書いてください。
+        ユーザーは今も何かで問題を解決している（またはしようとしている）。
+
+  - type: input
+    id: target-idea
+    attributes:
+      label: 対象 Idea Issue
+      placeholder: "例: #1 副業確定申告ガイド"
+    validations:
+      required: true
+
+  - type: textarea
+    id: non-app-alternatives
+    attributes:
+      label: アプリ以外の代替手段
+      description: Excel・メモ・習慣・人に頼る・何もしないなど。
+      placeholder: |
+        | 代替手段 | ユーザーの行動 | 不満・限界 |
+        |---|---|---|
+        | Googleで検索 | 「確定申告 副業 やり方」を毎年検索 | 情報が多すぎる・矛盾する |
+        | 友人の会計士に聞く | LINEで質問する | 毎年頼むのが申し訳ない・返信が遅い |
+        | 税務署に行く | ギリギリで窓口へ | 時間がかかる・毎年同じことを聞く |
+        | 放置・諦める | 申告しない | 追徴リスクの不安が続く |
+    validations:
+      required: true
+
+  - type: textarea
+    id: competitors
+    attributes:
+      label: 競合アプリ（最大5つ）
+      description: 直接競合・間接競合を含める。
+      value: |
+        | # | アプリ名 | 強み | 弱み | 料金 | 主なターゲット |
+        |---|---|---|---|---|---|
+        | 1 | | | | | |
+        | 2 | | | | | |
+        | 3 | | | | | |
+        | 4 | | | | | |
+        | 5 | | | | | |
+    validations:
+      required: true
+
+  - type: textarea
+    id: positioning
+    attributes:
+      label: ポジショニングメモ（任意）
+      description: 2軸マップをテキストで表現するか、Figmaリンクを貼る。
+      placeholder: |
+        X軸: かんたん ←→ 高機能
+        Y軸: 個人向け ←→ 事業者向け
+
+        - freee: 右上（高機能・事業者向け）
+        - 弥生: 右下（高機能・個人向け）
+        - 自分たちのポジション仮説: 左下（かんたん・個人向け・副業特化）
+    validations:
+      required: false
+
+  - type: textarea
+    id: winning-hypothesis
+    attributes:
+      label: 勝ち筋（差別化仮説）
+      description: なぜ既存の代替を使っているユーザーが乗り換えるのかを書く。
+      placeholder: |
+        **仮説**: freee・弥生は機能が多すぎて「副業のみ・初回申告」には過剰。
+        私たちは「副業の種類を選ぶだけで申告ステップが絞られる」体験に特化する。
+
+        **具体的な差別化**:
+        1. 副業カテゴリ特化（ライター・デザイナー・せどり等）で入力項目を最小化
+        2. 「今週やること」形式で確定申告を分割して不安をなくす
+        3. 無料 × 広告なし（初年度はマネタイズしない）
+
+        **リスク**: 副業カテゴリが増えると複雑化する可能性。
+    validations:
+      required: true
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 次アクション
+      placeholder: |
+        - 勝ち筋が明確 → 05: Prototype Test を起票する → @username
+        - 勝ち筋が不明 → 追加インタビューで「乗り換え条件」を確認する → @username
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: DoD
+      options:
+        - label: アプリ以外の代替手段が2つ以上書かれている
+          required: true
+        - label: 競合アプリが1つ以上分析されている
+          required: true
+        - label: 勝ち筋仮説が書かれている
+          required: true
+        - label: 次アクションが明記されている
+          required: true
+        - label: 2人が 👍 している
+          required: true

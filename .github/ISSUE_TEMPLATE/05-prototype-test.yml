@@ -1,0 +1,149 @@
+name: "05: Prototype Test"
+description: Figma 3画面プロトタイプのユーザーテスト記録。1セッション1Issue。
+title: "05: Prototype Test - [ターゲット属性] - [YYYY-MM-DD]"
+labels: ["research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🖼️ プロトタイプテスト
+        「これどう思いますか？」は聞かない。「実際に○○してください」とタスクを渡して観察する。
+
+  - type: input
+    id: target-idea
+    attributes:
+      label: 対象 Idea Issue
+      placeholder: "例: #1 副業確定申告ガイド"
+    validations:
+      required: true
+
+  - type: input
+    id: figma-link
+    attributes:
+      label: Figma プロトタイプリンク
+      placeholder: "https://www.figma.com/proto/..."
+    validations:
+      required: true
+
+  - type: input
+    id: interviewee
+    attributes:
+      label: 被験者属性
+      placeholder: "例: 30代男性・副業ライター・確定申告経験1回"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "---\n## 3画面の説明（テスト前に記入）"
+
+  - type: textarea
+    id: screen-onboarding
+    attributes:
+      label: "画面1: Onboarding（最初の1ステップ）"
+      description: この画面でユーザーに何をさせるか・何を伝えるかを書く。
+      placeholder: |
+        **目的**: 副業の種類を選ばせてプロダクトのスコープを絞る
+        **タスク**: 「副業の種類を選んでください」と伝えて操作を観察する
+        **成功条件**: 3秒以内に選択肢を見つけて選べる
+    validations:
+      required: true
+
+  - type: textarea
+    id: screen-core
+    attributes:
+      label: "画面2: Core Action（中心的な価値）"
+      description: プロダクトの核心となる操作をさせる画面。
+      placeholder: |
+        **目的**: 今月やることのチェックリストを生成して価値を体感させる
+        **タスク**: 「今月やることを確認してください」と伝えて操作を観察する
+        **成功条件**: チェックリストを見て「これなら自分でもできそう」と発言する
+    validations:
+      required: true
+
+  - type: textarea
+    id: screen-completion
+    attributes:
+      label: "画面3: Completion（完了・次の行動）"
+      description: ユーザーが最初の行動を終えた後の画面。
+      placeholder: |
+        **目的**: 達成感を与えて次回も戻ってくる動機を作る
+        **タスク**: 「最初のステップを完了させてください」と伝えて観察する
+        **成功条件**: 「次回はいつ使うか」を自分から話す
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "---\n## テスト結果（テスト後に記入）"
+
+  - type: textarea
+    id: observations
+    attributes:
+      label: 観察結果（迷い・詰まり・誤操作・発言）
+      description: 評価・解釈は後で。まず事実だけを書く。
+      placeholder: |
+        **Onboarding**
+        - 副業カテゴリの「その他」を最初に選ぼうとした（迷い）
+        - 「ライターってどこ？」と呟いた（ラベルが不明瞭）
+
+        **Core Action**
+        - チェックリストを上から順に読んで「え、これだけでいいの？」と発言
+        - 「領収書」という言葉で一瞬止まった
+
+        **Completion**
+        - 完了ボタンを押した後「次はいつ開くんだろう」と呟いた（次回の動機が不明）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: conclusion
+    attributes:
+      label: 結論
+      options:
+        - "Pass: 3画面を詰まらず完了し、価値を理解している → PRD-lite に進む"
+        - "Iterate: 一部で詰まりがあるが核心は伝わっている → 修正して再テスト"
+        - "Kill: 核心の価値が伝わっていない / 根本的な仮説が崩れた → Idea Cardに戻る"
+    validations:
+      required: true
+
+  - type: textarea
+    id: revisions
+    attributes:
+      label: 次の改修点（最大3つ）
+      description: Iterate/Killの場合のみ記入。優先度順に書く。
+      placeholder: |
+        1. 副業カテゴリのラベルを「ライター・物販・動画」など具体的な言葉に変更
+        2. Completionに「次にやること・日付」を表示して次回の動機を作る
+        3. （3つ目がなければ空白でOK）
+    validations:
+      required: false
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 次アクション
+      placeholder: |
+        - Pass → 06: PRD-lite を起票する → @username
+        - Iterate → Figmaを修正し再テストを1件起票する → @username
+        - Kill → 02: Idea Selection Issueに結果を報告し2位アイディアを繰り上げる → @username
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: DoD
+      options:
+        - label: Figmaリンクが貼られている
+          required: true
+        - label: 3画面の説明がテスト前に書かれている
+          required: true
+        - label: 観察結果が「事実ベース」で書かれている（評価ではない）
+          required: true
+        - label: 結論（Pass/Iterate/Kill）が選ばれている
+          required: true
+        - label: 次アクションが明記されている
+          required: true
+        - label: 2人が 👍 している
+          required: true

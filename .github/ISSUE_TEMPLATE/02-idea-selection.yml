@@ -1,0 +1,91 @@
+name: "02: Idea Selection"
+description: Idea Cardをスコアリングし、上位2案に絞る。
+title: "02: Idea Selection - [YYYY-MM-DD]"
+labels: ["decision"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎯 アイディア選定
+        スコア軸は1〜5点。合計点で上位2案を選びます。
+
+  - type: textarea
+    id: idea-links
+    attributes:
+      label: 対象 Idea Issue リスト
+      description: 採点対象のIssueをすべてリンクする。
+      placeholder: |
+        - #1 副業確定申告ガイド
+        - #2 支出トラッキング
+        - #3 ○○
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## スコア軸の定義
+
+        | 軸 | 1点 | 5点 |
+        |---|---|---|
+        | **痛みの強さ** | あったら便利程度 | 今すぐ解決したい切実な問題 |
+        | **頻度** | 年1回以下 | 毎日発生 |
+        | **既存代替の強さ** ⚠️逆転 | 強力な代替あり（不利） | 代替がない・ひどい（有利） |
+        | **初回価値** | 使い続けないと価値がわからない | 1回目で価値を実感できる |
+        | **実装難易度** ⚠️逆転 | 半年以上かかる（不利） | 2週間以内（有利） |
+        | **配布のしやすさ** | 流通経路が見えない | 口コミ・SEO等で自然に広まる |
+
+  - type: textarea
+    id: score-table
+    attributes:
+      label: スコアテーブル
+      description: 下のテーブルをコピーしてIssueアイディア名を埋めてください。
+      value: |
+        | アイディア | 痛みの強さ | 頻度 | 代替の強さ | 初回価値 | 実装難易度 | 配布しやすさ | 合計 |
+        |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+        | #1 アイディア名 | - | - | - | - | - | - | - |
+        | #2 アイディア名 | - | - | - | - | - | - | - |
+        | #3 アイディア名 | - | - | - | - | - | - | - |
+    validations:
+      required: true
+
+  - type: textarea
+    id: winner
+    attributes:
+      label: Winner 2案
+      description: 選んだ2案とその理由を書く。
+      placeholder: |
+        **1位: #1 副業確定申告ガイド（合計: 26点）**
+        理由: 頻度は年1回だが、痛みの強さと初回価値が最高点。競合が弱くSEO流入が見込める。
+
+        **2位: #3 ○○（合計: 23点）**
+        理由: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 次アクション
+      description: Winner 2案それぞれに対してインタビューを実施する。
+      placeholder: |
+        - [ ] #1に対して 03: Interview Session を3件起票する → @username
+        - [ ] #3に対して 03: Interview Session を3件起票する → @username
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: DoD
+      options:
+        - label: 全Idea IssueがリンクされてスコアテーブルがIssueに貼られている
+          required: true
+        - label: スコア根拠がコメントまたはテーブル備考に書かれている
+          required: true
+        - label: Winner 2案が決定し理由が書かれている
+          required: true
+        - label: 次アクション（インタビュー起票）が明記されている
+          required: true
+        - label: 2人が 👍 している
+          required: true

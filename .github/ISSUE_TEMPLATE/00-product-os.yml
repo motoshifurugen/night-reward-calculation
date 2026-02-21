@@ -1,0 +1,94 @@
+name: "00: Product OS"
+description: チームの運用ルールを固定する。プロジェクト開始時に1回だけ作成。
+title: "00: Product OS - [プロジェクト名]"
+labels: ["foundation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📌 このIssueについて
+        チーム全員が従う「憲法」です。変更時はこのIssueを更新し、全員が合意してからクローズしてください。
+
+  - type: input
+    id: dri
+    attributes:
+      label: DRI（最終意思決定者）
+      description: 意見が割れたとき、最後に決める人。
+      placeholder: "例: @username"
+    validations:
+      required: true
+
+  - type: textarea
+    id: meetings
+    attributes:
+      label: 会議体
+      description: 頻度・時間・目的を明記する。
+      placeholder: |
+        - Daily sync: 毎日 10分 / Slack huddle / 昨日やったこと・今日やること・ブロッカー
+        - Weekly retro: 毎週月曜 30分 / 進捗確認・意思決定
+    validations:
+      required: true
+
+  - type: textarea
+    id: ssot
+    attributes:
+      label: Single Source of Truth（成果物の集約場所）
+      description: 何をどこに置くかのルールを明記する。
+      placeholder: |
+        - 意思決定・議事録: GitHub Issues
+        - デザイン: Figma（リンクをIssueに貼る）
+        - コード: このリポジトリ
+        - スプレッドシート: 使わない（IssueのMarkdownテーブルで代替）
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision-rule
+    attributes:
+      label: 意思決定ルール
+      description: 期限・決め方・例外を明記する。
+      placeholder: |
+        - 通常: 48時間以内に合意が取れなければDRIが決定
+        - 緊急: DRIが即決、事後報告でOK
+        - 合意の形: Issueコメントに 👍 を付ける
+        - 例外: 費用発生・アーキテクチャ変更は必ず同期で合意
+    validations:
+      required: true
+
+  - type: textarea
+    id: dod-global
+    attributes:
+      label: グローバル DoD（全Issueの完了条件）
+      description: すべてのIssueに適用する完了条件。
+      placeholder: |
+        - 成果物がSSoTに保存されている
+        - 次のアクションがIssueまたはPRに起票されている
+        - 相手がIssueを読んで 👍 している
+    validations:
+      required: true
+
+  - type: textarea
+    id: misc
+    attributes:
+      label: その他ルール（任意）
+      placeholder: |
+        - mainへの直push禁止、必ずPR
+        - レビュー承認なしのマージ禁止
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: DoD
+      options:
+        - label: DRIが明記されている
+          required: true
+        - label: 会議体が明記されている
+          required: true
+        - label: SSoTが明記されている
+          required: true
+        - label: 意思決定ルールが明記されている
+          required: true
+        - label: 2人ともIssueを読んで 👍 している
+          required: true
