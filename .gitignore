@@ -1,0 +1,10 @@
+# Claude Code - per-user settings (DO NOT COMMIT)
+.claude/settings.local.json
+
+# Optional: user-specific variations
+.claude/*.local.json
+
+# State / cache (if present)
+.claude/cache/
+.claude/state/
+.claude/logs/

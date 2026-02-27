@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const i=JSON.parse(d);const cmd=i.tool_input?.command||'';if(process.platform!=='win32'&&!process.env.TMUX&&/(npm (install|test|run build|run dev)|pnpm( run)? (install|test|build|dev)|yarn (install|test|build|dev)|bun (install|test|run dev|run build)|cargo (build|test)|make\\b|docker\\b|pytest\\b|vitest\\b|playwright\\b)/.test(cmd)){console.error('[Hook] Consider running in tmux for session persistence.');console.error('[Hook] Start: tmux new -s dev');console.error('[Hook] Reattach: tmux attach -t dev')}}catch{}console.log(d)})\""
+          }
+        ],
+        "description": "Reminder to use tmux for long-running commands (warn only)"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/post-edit-format.js\""
+          }
+        ],
+        "description": "Auto-format JS/TS files after edits (auto-detects Biome or Prettier)"
+      }
+    ]
+  }
+}
