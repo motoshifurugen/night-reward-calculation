@@ -43,12 +43,18 @@ If blocked, suggest parallel tracks (e.g., investigate vs implement) and, if we 
 ---
 
 ## Workflow
-- Issue -> branch -> PR
-- Branch naming:
-  - `feat/<issue-id>-short-slug`
-  - `fix/<issue-id>-short-slug`
-  - `chore/<issue-id>-short-slug`
-- PR must include: `Closes #<issue-id>`.
+
+**Branch Rules (see `docs/quality.md` § Branch Rules):**
+
+- **main is protected:** no direct pushes; **PR-only** merges.
+- **Every branch must map to an Issue.** If no Issue exists, create it first.
+- **Naming:**
+  - `feat/<issue>-<slug>`
+  - `fix/<issue>-<slug>`
+  - `chore/<issue>-<slug>`
+- **Keep PRs small:** aim **< 400 LOC**. Split by responsibility.
+- **PR description must include** `Closes #<issue>`.
+- **main must always be deployable:** CI green on main; no broken builds.
 
 ### Atomic Commits
 - Prefer small, focused commits (one idea per commit).
