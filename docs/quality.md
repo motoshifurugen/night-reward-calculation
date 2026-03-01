@@ -47,19 +47,15 @@ TDD が任意な場面：
 ### Integration Tests（必要に応じて）
 
 - 対象：Next.js API Routes、Firestore との連携、認証フロー
-- ツール：Vitest + Firebase Emulator（推奨）or msw（モックサーバー）
+- ツール：Vitest + **Firebase Emulator**（Integration Tests では Emulator を利用する）
 - 対象フロー：食品記録の保存・取得、ユーザー設定の保存
-
-> **Open Question:** Firebase Emulator を使うか、msw でモックするか？
 
 ### E2E Tests（クリティカルフローのみ）
 
 - 対象：ログインフロー、食品記録フロー（最低2フロー）
 - ツール：Playwright
-- タイミング：MVP 完成後、または CI 安定化後に追加
+- タイミング：**MVP では実施しない**。MVP 完成後、または CI 安定化後に追加
 - 実行環境：CI の prod ブランチのみ（PR ごとには不要）
-
-> **Open Question:** E2E は MVP に含めるか、Week 4 以降に後回しにするか？
 
 ---
 
@@ -141,33 +137,33 @@ PR をマージするには、以下を**全て**満たす必要がある：
 └─────────────────────────────────────────┘
 ```
 
-> **Open Question:** GitHub Actions のワークフローファイルを `.github/workflows/ci.yml` として今すぐ作成するか？
+**決定:** GitHub ワークフローファイル（`.github/workflows/ci.yml`）は**今は実装しない**。必要になった時点で追加する。
 
 ---
 
 ## Rationale
 
 - Vitest は Next.js / Vite 環境と親和性が高く、設定コストが低い
-- カバレッジ目標 80% は、品質とスピードのバランスを取った現実的な数値
+- カバレッジ目標 **80%** で確定（品質とスピードのバランスを取った現実的な数値）
 - CI でカバレッジを測定・ゲートにすることで、テスト追加の忘れを防ぐ
 - E2E を後回しにする判断は、MVP スピードを優先するため（ただし将来必須）
 
 ---
 
-## Open Questions
+## Open Questions（解決済み分の決定）
 
-| # | 質問 | 担当 | 期限 |
-|---|---|---|---|
-| 1 | Firebase Emulator vs msw、どちらでモックするか？ | - | - |
-| 2 | E2E（Playwright）を MVP に含めるか？ | - | stack.md と連動 |
-| 3 | CI ワークフローを今すぐ実装するか？ | - | - |
-| 4 | カバレッジ目標 80% は適切か？ | - | - |
+| # | 質問 | 回答・決定 |
+|---|---|---|
+| 1 | Firebase Emulator vs msw、どちらでモックするか？ | **Integration Tests には Firebase Emulator を利用する** |
+| 2 | E2E（Playwright）を MVP に含めるか？ | **E2E Tests は MVP では実施しない** |
+| 3 | CI ワークフローを今すぐ実装するか？ | **GitHub ワークフローファイルは今は実装しない** |
+| 4 | カバレッジ目標 80% は適切か？ | **80% で OK（適切とする）** |
 
 ---
 
 ## Next Actions
 
-- [ ] `.github/workflows/ci.yml` を作成する（lint → typecheck → test → build）
+- [ ] ~~`.github/workflows/ci.yml` を作成する~~ → **今は実装しない**（必要時に対応）
 - [ ] `vitest.config.ts` を設定する（カバレッジ含む）
 - [ ] `eslint.config.js` を Next.js 推奨ルールで設定する
 - [ ] `tsconfig.json` に `"strict": true` が設定されていることを確認する
