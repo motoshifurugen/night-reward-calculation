@@ -33,7 +33,7 @@
 | アラートレッド | `#CF3333` | エラー / カロリー超過 | 危険・注意 |
 | ピンク（薄） | `#F39F9F` | サブ強調 / タグ / 補助情報 | 柔らかい・親しみ |
 
-> **Open Question:** ダークモードは MVP に含めるか？含める場合、各色の dark variant を定義する。
+> **Decision:** ダークモードは MVP に含めない（将来対応で各色の dark variant を定義する）。
 > **Open Question:** プライマリカラーは `#FFC300` で確定か、チームで承認する。
 
 ### 背景・テキスト（未確定）
@@ -61,6 +61,18 @@
 
 > **Open Question:** 食品詳細はモーダルかフルページか（モバイル UX 観点でモーダル推奨）。
 > **Open Question:** 画面 #5 の履歴はグラフ表示か、リスト表示か、両方か？
+
+### 画面モック
+
+Stitch で作成した画面。下表に追加済み。
+
+| ダッシュボード | 記録画面 |
+| --- | --- |
+| <img width="240" alt="Image" src="https://github.com/user-attachments/assets/70087d2b-303c-4886-854b-882138416903" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/b8f05437-b4ba-402d-a9f6-7f448bf4e9c8" /> |
+
+| 料理詳細画面 | お気に入り追加モーダル | ユーザー登録画面 |
+| --- | --- | --- |
+| <img width="240" alt="Image" src="https://github.com/user-attachments/assets/78e36ae0-c782-47b5-9afe-c783f325eb5a" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/3ef73fce-ded4-48c4-bb27-5b9500b2de80" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/524e4b99-5675-441a-8174-145d39024edc" /> |
 
 ---
 
@@ -96,10 +108,10 @@
 | 項目 | 方針 |
 |---|---|
 | 言葉のトーン | フレンドリー・前向き。命令形を避け、誘導型にする |
-| アニメーション | Subtle（さりげなく）。過剰なアニメは避ける |
+| アニメーション | Subtle（さりげなく）。過剰なアニメは避ける。ライブラリは Framer Motion を利用する |
 | 余白 | ゆとりのある余白（8px グリッド基準） |
 | フォント | システムフォント優先（Inter or Noto Sans JP） |
-| アイコン | シンプル・線形アイコン（Heroicons または Lucide） |
+| アイコン | [Heroicons](https://heroicons.com/) を利用する（シンプル・線形） |
 | イラスト / 画像 | 生成AIで用意した料理画像（統一感ある明るいスタイル） |
 
 ---
@@ -115,15 +127,18 @@
 
 | # | 質問 | 担当 | 期限 |
 |---|---|---|---|
-| 1 | Figma でのワイヤーフレーム / モックアップを作るか？ | - | - |
-| 2 | アニメーションライブラリは Framer Motion を採用するか？ | - | - |
-| 3 | オンボーディング（初回体験）は何ステップにするか？ | - | - |
-| 4 | ダークモードは MVP に含めるか？ | - | - |
+| 1 | オンボーディング（初回体験）は何ステップにするか？ | - | 未定 |
+
+**決定済み（Open Questions から移動）**
+
+- **ワイヤーフレーム / モックアップ:** Figma では作成しない。Stitch で作成する。Stitch で作成した画面は表「画面モック」に追加済み。
+- **アニメーションライブラリ:** Framer Motion を採用する。
+- **ダークモード:** MVP には含めない。
 
 ---
 
 ## Next Actions
 
-- [ ] 画面一覧の各画面のワイヤーフレームを作成する（Figma or 手書き）
-- [ ] カラーパレットをチームで承認し、Tailwind config に反映する
-- [ ] 食品検索のUX（オートコンプリート or 送信ボタン）を決定する
+- [x] 画面一覧の各画面のワイヤーフレームを Stitch で作成する（表「画面モック」に追加済み）
+- [x] カラーパレットをチームで承認し、Tailwind config に反映する
+- [x] 食品検索のUX（オートコンプリート or 送信ボタン）を決定する
