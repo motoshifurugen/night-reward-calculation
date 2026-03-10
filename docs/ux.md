@@ -70,9 +70,9 @@ Stitch で作成した画面。下表に追加済み。
 | --- | --- |
 | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/70087d2b-303c-4886-854b-882138416903" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/b8f05437-b4ba-402d-a9f6-7f448bf4e9c8" /> |
 
-| 料理詳細画面 | お気に入り追加モーダル | ユーザー登録画面 |
-| --- | --- | --- |
-| <img width="240" alt="Image" src="https://github.com/user-attachments/assets/78e36ae0-c782-47b5-9afe-c783f325eb5a" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/3ef73fce-ded4-48c4-bb27-5b9500b2de80" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/524e4b99-5675-441a-8174-145d39024edc" /> |
+| 料理選択画面 | 料理詳細画面 | お気に入り追加モーダル | ユーザー登録画面 |
+| --- | --- | --- | --- |
+| <img width="240" alt="Image" src="https://github.com/user-attachments/assets/65436b90-7f7d-403f-9f4a-1862f622cc60" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/78e36ae0-c782-47b5-9afe-c783f325eb5a" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/3ef73fce-ded4-48c4-bb27-5b9500b2de80" /> | <img width="240" alt="Image" src="https://github.com/user-attachments/assets/524e4b99-5675-441a-8174-145d39024edc" /> |
 
 ---
 
@@ -101,6 +101,17 @@ Stitch で作成した画面。下表に追加済み。
 2. 「通知を受け取る」→ CTA（App Store 事前登録 or メール収集）
 3. 「今はいい」→ モーダルを閉じ、30日間非表示
 
+### 今日の記録がない場合の画面遷移
+
+ログイン後、**今日まだ1件も記録がない**状態でダッシュボード（ホーム）に来たユーザー向けに、記録へ誘導する入口を変える案。負荷をかけすぎず「今日の1件」を促すことを目的とする。
+
+| 案 | 内容 | メリット |
+|---|---|---|
+| **案1** | 今日の記録が0件のとき、**ダッシュボードではなく記録画面（食品検索など記録の入口）に直接遷移する** | 迷わせずすぐ「記録する」に集中できる |
+| **案2** | ホーム（ダッシュボード）を表示し、**モーダルを出して「今日はまだ記録がありません」と案内 → ボタンで記録画面へ遷移** | ホームの存在を伝えつつ、明示的に記録を促せる |
+
+> **Open Question:** 案1・案2のどちらを採用するか（A/B検証の対象にするかは別途検討）。
+
 ---
 
 ## トーン & マナー
@@ -128,6 +139,7 @@ Stitch で作成した画面。下表に追加済み。
 | # | 質問 | 担当 | 期限 |
 |---|---|---|---|
 | 1 | オンボーディング（初回体験）は何ステップにするか？ | - | 未定 |
+| 2 | 今日の記録がない場合の画面遷移は案1（記録画面へ直接）か案2（ホーム＋モーダル→記録）か？ | - | 未定 |
 
 **決定済み（Open Questions から移動）**
 
