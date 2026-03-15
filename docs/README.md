@@ -16,6 +16,7 @@
 | [stack.md](./stack.md) | 技術スタック / デプロイ / 環境方針 | エンジニア全員 |
 | [data.md](./data.md) | Firestoreモデル / seedデータ / 画像管理 | バックエンド・フロント |
 | [quality.md](./quality.md) | TDD / テスト戦略 / ブランチ戦略 / PR DoD / CI フロー | エンジニア全員 |
+| [guide/00-hands-on.md](./guide/00-hands-on.md) | ハンズオンの始め方 | 新規参加者 |
 | [guide/01-setup.md](./guide/01-setup.md) | 環境構築ガイド（初心者向け） | 新規参加者 |
 | [guide/02-top-page.md](./guide/02-top-page.md) | トップページ実装ガイド（TDD） | 新規参加者 |
 | [guide/03-dashboard.md](./guide/03-dashboard.md) | ダッシュボード・Zustand ガイド | 新規参加者 |
