@@ -58,6 +58,18 @@ When this command is invoked, the agent must:
 8. Refactor only for readability or safety
 9. Re-run tests after refactor
 10. Mention coverage expectations (target 80%+)
+11. After implementation, add careful in-code comments that explain the implemented behavior; **comment text must be written in Japanese** (see **Coding Policy: In-Code Comments** below)
+
+---
+
+## Coding Policy: In-Code Comments
+
+When documenting implementation inside source files:
+
+- Write comments **in Japanese** (the surrounding command/spec stays English; the comments embedded in code are Japanese).
+- Explain not only *what* the code does, but *why* it is written that way, at a level where a future reader can follow assumptions, trade-offs, and edge cases.
+- Avoid noisy one-line comments for the obvious; prioritize domain rules, non-obvious branches, and workarounds where misunderstanding is likely.
+- Use comments on the implementation side to capture intent or constraints that tests alone do not express clearly.
 
 ---
 
