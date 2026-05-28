@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-outfit: var(--font-outfit), sans-serif;
+
+  /* docs/ux.md のカラーパレット */
+  --color-primary: #FFC300;   /* サンフラワーイエロー: プライマリ CTA / 重要ボタン */
+  --color-highlight: #EFF669; /* ライムイエロー: ハイライト / バッジ / 達成表示 */
+  --color-secondary: #FFF9C4; /* 薄いクリームイエロー（淡い黄色）: 背景カラー */
+  --color-health: #9BCB3C;   /* リーフグリーン: 健康スコア / 目標達成 */
+  --color-warning: #FF8C00;  /* オレンジ: 警告 / カロリー超過の手前 */
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  --color-danger: #CF3333;   /* アラートレッド: エラー / カロリー超過 */
+  --color-accent: #F39F9F;   /* ピンク: サブ強調 / タグ / 補助情報 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ベルボタン: ホバー時に上に浮き上がり、影をつける */
+#bell-button:hover {
+  transform: translateY(-2px); /* 2px上に移動 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 影をつける */
+  transition: all 0.2s ease; /* 0.2秒でアニメーション */
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ベルボタン: クリック時に元の位置に戻り、影を消す */
+#bell-button:active {
+  transform: translateY(0px); /* 元の位置に戻す */
+  box-shadow: none; /* 影を消す */
+  transition: all 0.1s ease; /* 0.1秒で素早くアニメーション */
 }
