@@ -1,18 +1,9 @@
 import "./TodayCalorie.css";
-import todayCalorieData from "../../data/todayCalorie.json";
-import { sumCalories } from "@/lib/calories";
-
-type MealItem = {
-  name: string;
-  calorie: number;
-};
-
-type Meal = {
-  id: string;
-  label: string;
-  icon: string;
-  items: MealItem[];
-};
+import currentMenuData from "../../data/currentMenu.json";
+import menuData from "../../data/menu.json";
+import { getDailyData } from "@/lib/dailyMenuData";
+import { buildMenuMap, calcMealCalorie } from "@/lib/dailyMenu";
+import type { MenuItem } from "@/lib/dailyMenu";
 
 const RADIUS = 60;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
@@ -33,32 +24,18 @@ function CircularProgress({ percentage }: { readonly percentage: number }) {
       <defs>
         <linearGradient
           id="progressGradient"
-          x1="70"
-          y1="10"
-          x2="70"
-          y2="130"
+          x1="70" y1="10" x2="70" y2="130"
           gradientUnits="userSpaceOnUse"
         >
           <stop offset="0%" stopColor="#FFFFFF" />
           <stop offset="100%" stopColor="#2D8A0A" />
         </linearGradient>
       </defs>
-      <circle
-        cx="70"
-        cy="70"
-        r={RADIUS}
-        fill="none"
-        stroke="#E5E7EB"
-        strokeWidth="12"
-      />
+      <circle cx="70" cy="70" r={RADIUS} fill="none" stroke="#E5E7EB" strokeWidth="12" />
       <circle
         data-testid="calorie-progress-arc"
-        cx="70"
-        cy="70"
-        r={RADIUS}
-        fill="none"
-        stroke={stroke}
-        strokeWidth="12"
+        cx="70" cy="70" r={RADIUS}
+        fill="none" stroke={stroke} strokeWidth="12"
         strokeLinecap="round"
         strokeDasharray={CIRCUMFERENCE}
         strokeDashoffset={dashOffset}
@@ -68,22 +45,28 @@ function CircularProgress({ percentage }: { readonly percentage: number }) {
   );
 }
 
-export default function TodayCalorie() {
-  const { targetCalorie, meals } = todayCalorieData as {
-    targetCalorie: number;
-    meals: Meal[];
-  };
+interface TodayCalorieProps {
+  readonly today?: string;
+}
 
-  const mealTotals = meals.map((meal) =>
-    sumCalories(meal.items.map((item) => item.calorie))
-  );
-  const totalConsumed = sumCalories(mealTotals);
+export default function TodayCalorie({
+  today = new Date().toISOString().split("T")[0],
+}: TodayCalorieProps) {
+  const { targetCalorie } = currentMenuData;
+  const menuMap = buildMenuMap(menuData as MenuItem[]);
+  const daily = getDailyData(today);
+
+  const meals = daily?.meals ?? { breakfast: [], lunch: [], dinner: [] };
+  const totalConsumed =
+    calcMealCalorie(meals.breakfast, menuMap) +
+    calcMealCalorie(meals.lunch, menuMap) +
+    calcMealCalorie(meals.dinner, menuMap);
+
   const remaining = targetCalorie - totalConsumed;
   const percentage = (totalConsumed / targetCalorie) * 100;
 
   return (
     <section className="mx-4 my-4 rounded-2xl bg-linear-to-br from-white to-lime-200 p-5 shadow-md">
-      {/* ヘッダー: タイトル (左) / 目標カロリー (右上) */}
       <div className="mb-4 flex items-start justify-between">
         <h2 className="text-base font-bold">今日の摂取カロリー</h2>
         <p
@@ -94,7 +77,6 @@ export default function TodayCalorie() {
         </p>
       </div>
 
-      {/* ボディ: チャート (左) / 残カロリー (右) */}
       <div className="mb-5 flex items-center justify-start gap-6">
         <div className="calorie-chart-wrapper">
           <CircularProgress percentage={percentage} />
@@ -128,7 +110,6 @@ export default function TodayCalorie() {
           </p>
         </div>
       </div>
-
     </section>
   );
 }

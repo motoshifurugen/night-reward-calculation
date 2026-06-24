@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { selectMainDish } from "../mealHistory";
+import { selectMainDish } from "../dailyHistory";
 
 const item = (name: string, calorie: number) => ({
   menuId: name,

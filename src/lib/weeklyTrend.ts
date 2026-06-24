@@ -1,3 +1,4 @@
+/** チャート描画用: カロリーは dailyHistory から計算して付加する */
 export type WeeklyRecord = {
   readonly date: string;
   readonly calorie: number;
@@ -16,7 +17,8 @@ export function buildChartPoints(
   records: ReadonlyArray<WeeklyRecord>,
   today: string
 ): ChartPoint[] {
-  const sorted = [...records].sort((a, b) => a.date.localeCompare(b.date));
+  const upToToday = records.filter((r) => r.date <= today);
+  const sorted = [...upToToday].sort((a, b) => a.date.localeCompare(b.date));
   const last7 = sorted.slice(-7);
   return last7.map((r) => ({
     date: r.date,
@@ -78,6 +80,28 @@ export function calorieToY(
 ): number {
   if (calorieUpper === calorieLower) return (lowerY + upperY) / 2;
   return lowerY + (upperY - lowerY) * (calorie - calorieLower) / (calorieUpper - calorieLower);
+}
+
+export function calcCalorieDomain(
+  calories: ReadonlyArray<number>
+): { lower: number; upper: number } {
+  if (calories.length === 0) return { lower: 1000, upper: 3000 };
+  const min = Math.min(...calories);
+  const max = Math.max(...calories);
+  const lower = Math.floor((min - 500) / 500) * 500;
+  const upper = Math.ceil((max + 500) / 500) * 500;
+  return { lower, upper };
+}
+
+export function calcWeightDomain(
+  weights: ReadonlyArray<number>
+): { lower: number; upper: number } {
+  if (weights.length === 0) return { lower: 50, upper: 100 };
+  const min = Math.min(...weights);
+  const max = Math.max(...weights);
+  const lower = Math.floor((min - 5) / 5) * 5;
+  const upper = Math.ceil((max + 5) / 5) * 5;
+  return { lower, upper };
 }
 
 export function smoothPath(

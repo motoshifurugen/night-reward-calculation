@@ -1,15 +1,19 @@
-import Navbar from "./home/Navbar";
+import Navbar from "./utility/Navbar";
 import TodayCalorie from "./home/TodayCalorie";
-import WeeklyProceed from "./home/WeeklyProceed";
-import Footer from "./Footer";
+import WeeklyMenu from "./home/WeeklyMenu";
+import WeeklyProgress from "./home/WeeklyProgress";
+import MonthCalendar from "./home/MonthCalendar";
+import Footer from "./utility/Footer";
 
-export default function Page() {
+export default function HomePage() {
   return (
     <>
       <main className="pb-16">
-        <Navbar />
+        <Navbar variant="home" />
         <TodayCalorie />
-        <WeeklyProceed />
+        <WeeklyProgress />
+        <WeeklyMenu />
+        <MonthCalendar />
       </main>
       <Footer />
     </>

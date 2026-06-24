@@ -1,5 +1,9 @@
 import { describe, it, expect } from "vitest";
+import { existsSync, statSync } from "node:fs";
+import { join } from "node:path";
 import menuData from "../menu.json";
+
+const MIN_PHOTO_SIZE_BYTES = 2000;
 
 const VALID_DISH_TYPES = [
   "麺類", "肉料理", "魚料理", "揚げ物", "丼物",
@@ -30,8 +34,8 @@ type MenuItem = {
 };
 
 describe("menu.json", () => {
-  it("20件のメニューが存在する", () => {
-    expect(menuData).toHaveLength(20);
+  it("30件のメニューが存在する", () => {
+    expect(menuData).toHaveLength(30);
   });
 
   it("各メニューに必須フィールドが存在する", () => {
@@ -51,15 +55,30 @@ describe("menu.json", () => {
     });
   });
 
-  it("imageUrl は https:// で始まる", () => {
+  it("imageUrl はローカルの /images/meals/ パスを指す写真ファイルである", () => {
     (menuData as MenuItem[]).forEach((item) => {
-      expect(item.imageUrl).toMatch(/^https:\/\//);
+      expect(item.imageUrl).toMatch(/^\/images\/meals\/[a-z0-9-]+\.(jpg|jpeg|png|webp)$/);
+    });
+  });
+
+  it("imageUrl が指す画像ファイルが public 配下に実在する", () => {
+    (menuData as MenuItem[]).forEach((item) => {
+      const filePath = join(process.cwd(), "public", item.imageUrl);
+      expect(existsSync(filePath)).toBe(true);
+    });
+  });
+
+  it("imageUrl の画像ファイルがプレースホルダーではない実写真サイズである", () => {
+    (menuData as MenuItem[]).forEach((item) => {
+      const filePath = join(process.cwd(), "public", item.imageUrl);
+      const { size } = statSync(filePath);
+      expect(size).toBeGreaterThan(MIN_PHOTO_SIZE_BYTES);
     });
   });
 
   it("id はすべてユニーク", () => {
     const ids = (menuData as MenuItem[]).map((item) => item.id);
-    expect(new Set(ids).size).toBe(20);
+    expect(new Set(ids).size).toBe(ids.length);
   });
 
   it("dishType が有効な値である", () => {

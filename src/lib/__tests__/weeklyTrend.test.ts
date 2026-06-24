@@ -7,6 +7,8 @@ import {
   snapWeightBase,
   computeTargetLineY,
   calorieToY,
+  calcCalorieDomain,
+  calcWeightDomain,
 } from "../weeklyTrend";
 
 const records = [
@@ -58,6 +60,32 @@ describe("buildChartPoints", () => {
     const points = buildChartPoints(records, "2026-05-28");
     expect(points[0].calorie).toBe(1850);
     expect(points[0].weight).toBe(65.8);
+  });
+
+  it("today より未来の日付（予定献立など）は除外される", () => {
+    const withFuture = [
+      ...records,
+      { date: "2026-05-29", calorie: 1700, weight: 64.8 },
+      { date: "2026-05-30", calorie: 1750, weight: 64.7 },
+    ];
+    const points = buildChartPoints(withFuture, "2026-05-28");
+    expect(points).toHaveLength(7);
+    expect(points.every((p) => p.date <= "2026-05-28")).toBe(true);
+    expect(points[points.length - 1].label).toBe("今日");
+  });
+
+  it("today が配列の途中にある場合、today を含む直近7日のみが返る", () => {
+    const tenDays = Array.from({ length: 10 }, (_, i) => ({
+      date: `2026-05-${19 + i}`, // 2026-05-19 〜 2026-05-28
+      calorie: 1500 + i * 10,
+      weight: 65.0 - i * 0.1,
+    }));
+    const points = buildChartPoints(tenDays, "2026-05-25");
+    expect(points).toHaveLength(7);
+    expect(points[0].date).toBe("2026-05-19");
+    expect(points[points.length - 1].date).toBe("2026-05-25");
+    expect(points[points.length - 1].label).toBe("今日");
+    expect(points.every((p) => p.date <= "2026-05-25")).toBe(true);
   });
 });
 
@@ -172,6 +200,70 @@ describe("calorieToY", () => {
 
   it("範囲外 (500 kcal) は外挿される", () => {
     expect(calorieToY(500, lowerY, upperY)).toBeGreaterThan(lowerY);
+  });
+});
+
+describe("calcCalorieDomain", () => {
+  it("min-500 と max+500 を 500 単位で丸めた範囲を返す", () => {
+    // min=1450, max=2100
+    // lower = floor((1450-500)/500)*500 = 500
+    // upper = ceil((2100+500)/500)*500  = 3000
+    const calories = [1850, 1600, 2100, 1750, 1950, 1450, 1650];
+    expect(calcCalorieDomain(calories)).toEqual({ lower: 500, upper: 3000 });
+  });
+
+  it("値がすべて同じ場合", () => {
+    // lower = floor((2000-500)/500)*500 = 1500
+    // upper = ceil((2000+500)/500)*500  = 2500
+    expect(calcCalorieDomain([2000, 2000, 2000])).toEqual({ lower: 1500, upper: 2500 });
+  });
+
+  it("値が 500 の倍数の場合は境界がそのまま 500 単位になる", () => {
+    // lower = floor((1500-500)/500)*500 = 1000
+    // upper = ceil((2500+500)/500)*500  = 3000
+    expect(calcCalorieDomain([1500, 2500])).toEqual({ lower: 1000, upper: 3000 });
+  });
+
+  it("1 件のみの場合", () => {
+    // lower = floor((1800-500)/500)*500 = 1000 (floor(2.6)*500)
+    // upper = ceil((1800+500)/500)*500  = 2500 (ceil(4.6)*500)
+    expect(calcCalorieDomain([1800])).toEqual({ lower: 1000, upper: 2500 });
+  });
+
+  it("空配列の場合はデフォルト {lower:1000, upper:3000} を返す", () => {
+    expect(calcCalorieDomain([])).toEqual({ lower: 1000, upper: 3000 });
+  });
+});
+
+describe("calcWeightDomain", () => {
+  it("min-5 と max+5 を 5 単位で丸めた範囲を返す", () => {
+    // min=64.9, max=65.9
+    // lower = floor((64.9-5)/5)*5 = floor(11.98)*5 = 55
+    // upper = ceil((65.9+5)/5)*5  = ceil(14.18)*5  = 75
+    const weights = [65.8, 65.6, 65.9, 65.5, 65.3, 65.1, 64.9];
+    expect(calcWeightDomain(weights)).toEqual({ lower: 55, upper: 75 });
+  });
+
+  it("値がすべて同じ場合", () => {
+    // lower = floor((70-5)/5)*5 = 65
+    // upper = ceil((70+5)/5)*5  = 75
+    expect(calcWeightDomain([70, 70, 70])).toEqual({ lower: 65, upper: 75 });
+  });
+
+  it("値が 5 の倍数の場合は境界がそのまま 5 単位になる", () => {
+    // lower = floor((60-5)/5)*5 = 55
+    // upper = ceil((70+5)/5)*5  = 75
+    expect(calcWeightDomain([60, 70])).toEqual({ lower: 55, upper: 75 });
+  });
+
+  it("1 件のみの場合", () => {
+    // lower = floor((68-5)/5)*5 = 60 (floor(12.6)*5)
+    // upper = ceil((68+5)/5)*5  = 75 (ceil(14.6)*5)
+    expect(calcWeightDomain([68])).toEqual({ lower: 60, upper: 75 });
+  });
+
+  it("空配列の場合はデフォルト {lower:50, upper:100} を返す", () => {
+    expect(calcWeightDomain([])).toEqual({ lower: 50, upper: 100 });
   });
 });
 

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import TodayMenu from "../home/TodayMenu";
+import TodayMenu from "../../menu/TodayMenu";
 
 describe("TodayMenu", () => {
   it("'今日の献立' タイトルが表示される", () => {
@@ -34,7 +34,7 @@ describe("TodayMenu", () => {
   });
 
   it("登録済み食事カードにはメイン料理の画像が表示される", () => {
-    render(<TodayMenu today="2026-05-28" />);
+    render(<TodayMenu today="2026-06-09" />);
     const images = screen.getAllByTestId("today-meal-image");
     expect(images.length).toBeGreaterThan(0);
     images.forEach((img) => expect(img).toHaveAttribute("src"));
@@ -42,7 +42,8 @@ describe("TodayMenu", () => {
 
   it("未登録の食事には '未登録' が表示される", () => {
     render(<TodayMenu today="2026-05-28" />);
-    expect(screen.getByText("未登録")).toBeInTheDocument();
+    const items = screen.getAllByText("未登録");
+    expect(items.length).toBeGreaterThan(0);
   });
 
   it("メインカードの data-status が正しいステータスを持つ", () => {

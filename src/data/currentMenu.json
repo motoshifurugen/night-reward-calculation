@@ -1,0 +1,1045 @@
+{
+  "targetCalorie": 2000,
+  "targetWeight": 65.1,
+  "dailyHistory": [
+    {
+      "date": "2026-06-03",
+      "weight": 65.4,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "curry-rice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "salad", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-04",
+      "weight": 65.3,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 },
+          { "menuId": "gyoza", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "karaage", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-05",
+      "weight": 65.2,
+      "meals": {
+        "breakfast": [
+          { "menuId": "tamagoyaki", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ],
+        "lunch": [
+          { "menuId": "karaage", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-06",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "soba", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "yakitori", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-07",
+      "weight": 65.0,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "udon", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "yakitori", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-08",
+      "weight": 64.9,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "tamagoyaki", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-09",
+      "weight": 64.8,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 },
+          { "menuId": "gyoza", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "karaage", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-10",
+      "weight": 64.8,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "hambagu", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ginger-pork", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-11",
+      "weight": 64.7,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "pasta", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "mapo-tofu", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "weight": 64.7,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "omurice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "nikujaga", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-13",
+      "weight": 64.6,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 2 },
+          { "menuId": "hiyayakko", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "gratin", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "teriyaki-chicken", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-14",
+      "weight": 64.6,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "hiyashi-chuka", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "steak", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "weight": 64.5,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "tsukemen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ebi-fry", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "weight": 64.5,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "bibimbap", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "korokke", "servings": 2 },
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-17",
+      "weight": 64.5,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "udon", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "karaage", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "weight": 64.4,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 2 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "curry-rice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "tamagoyaki", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "weight": 64.4,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 },
+          { "menuId": "gyoza", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ginger-pork", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "weight": 64.3,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "pasta", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "steak", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "weight": 64.3,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "hambagu", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "nikujaga", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "weight": 64.2,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "soba", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "yakitori", "servings": 1 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-23",
+      "weight": 64.2,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "omurice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "teriyaki-chicken", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "weight": 64.2,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "tsukemen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ebi-fry", "servings": 1 },
+          { "menuId": "salad", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-25",
+      "weight": 64.3,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 2 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "curry-rice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "mapo-tofu", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "weight": 64.3,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ginger-pork", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-27",
+      "weight": 64.4,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "bibimbap", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "steak", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-28",
+      "weight": 64.4,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "gratin", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "nikujaga", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-29",
+      "weight": 64.5,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 1 },
+          { "menuId": "hiyayakko", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "udon", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "yakitori", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "weight": 64.5,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "hiyashi-chuka", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "tonkatsu", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "weight": 64.6,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "soba", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "karaage", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "weight": 64.6,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 2 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "omurice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "hambagu", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-03",
+      "weight": 64.7,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 },
+          { "menuId": "gyoza", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ebi-fry", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "weight": 64.7,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "pasta", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "steak", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-05",
+      "weight": 64.8,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "curry-rice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "nikujaga", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-06",
+      "weight": 64.8,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "tsukemen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "yakitori", "servings": 1 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-07",
+      "weight": 64.9,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "bibimbap", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ginger-pork", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-08",
+      "weight": 64.9,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "udon", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "korokke", "servings": 2 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-09",
+      "weight": 65.0,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 2 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "hiyashi-chuka", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "teriyaki-chicken", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-10",
+      "weight": 65.0,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "mapo-tofu", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-11",
+      "weight": 65.0,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "gratin", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "steak", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "omurice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "hambagu", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-13",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "soba", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "karaage", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-14",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "curry-rice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ebi-fry", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-15",
+      "weight": 65.0,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "tsukemen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ginger-pork", "servings": 1 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-16",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 2 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "bibimbap", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "yakitori", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 },
+          { "menuId": "gyoza", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "nikujaga", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-18",
+      "weight": 65.2,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "pasta", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "steak", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-19",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "hiyashi-chuka", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "teriyaki-chicken", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-20",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 1 },
+          { "menuId": "hiyayakko", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "udon", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "korokke", "servings": 2 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-21",
+      "weight": 65.0,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "omurice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "mapo-tofu", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-22",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "soba", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "karaage", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-23",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 2 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "curry-rice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "hambagu", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "weight": 65.2,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "ramen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ebi-fry", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "gratin", "servings": 1 },
+          { "menuId": "caesar-salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "steak", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-26",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "bibimbap", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "nikujaga", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "weight": 65.0,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "tsukemen", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "ginger-pork", "servings": 1 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "miso-soup", "servings": 1 },
+          { "menuId": "tamagoyaki", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "hiyashi-chuka", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "yakitori", "servings": 1 },
+          { "menuId": "white-rice", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-29",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "pasta", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "teriyaki-chicken", "servings": 1 },
+          { "menuId": "white-rice", "grams": 150 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "weight": 65.2,
+      "meals": {
+        "breakfast": [
+          { "menuId": "onigiri", "servings": 2 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "omurice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "tonkatsu", "servings": 1 },
+          { "menuId": "miso-soup", "servings": 1 }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "weight": 65.1,
+      "meals": {
+        "breakfast": [
+          { "menuId": "white-rice", "grams": 150 },
+          { "menuId": "tonjiru", "servings": 1 }
+        ],
+        "lunch": [
+          { "menuId": "curry-rice", "servings": 1 }
+        ],
+        "dinner": [
+          { "menuId": "steak", "servings": 1 },
+          { "menuId": "salad", "servings": 1 }
+        ]
+      }
+    }
+  ]
+}
