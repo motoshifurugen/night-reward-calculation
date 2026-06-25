@@ -1,0 +1,29 @@
+/* SVGチャート用: position: relative が必要なため CSS で管理 */
+.calorie-chart-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* チャート中央テキスト: absolute 配置で正確に中央へ */
+.calorie-chart-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+/* 食事アイコン: サイズと形状 */
+.calorie-meal-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
